@@ -53,14 +53,14 @@ const AIActions = ({ note, onSummarize, isSummarizing, onFetchNotes }) => {
           {isSummarizing ? 'Summarizing...' : '🤖 Summarize'}
         </button>
 
-        <button
+        {/* <button
           className={`ai-button ${isGeneratingTitle ? 'loading' : ''}`}
           onClick={handleGenerateTitle}
           disabled={isGeneratingTitle || note.content.length < 20}
           title="Generate AI title suggestion"
         >
           {isGeneratingTitle ? 'Generating...' : '💡 Suggest Title'}
-        </button>
+        </button> */}
       </div>
 
       <Modal

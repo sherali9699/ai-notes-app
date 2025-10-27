@@ -17,7 +17,8 @@ class AIService {
       if (!content || content.trim().length < 50) {
         throw new Error('Content too short for summarization. Minimum 50 characters required.');
       }
-
+      console.log('this is the content being sent to get summary: ${content}');
+      console.log(content)
       const prompt = `Please provide a concise summary (2-3 sentences maximum) of the following text. Focus on the key points and main ideas:
 
 ${content}
@@ -40,7 +41,8 @@ Summary:`;
       if (!content || content.trim().length < 20) {
         throw new Error('Content too short for title generation');
       }
-
+      
+      console.log('this is the content being sent to get title: ${content}');
       const prompt = `Generate a short, descriptive title (max 5-7 words) for the following text:
 
 ${content}
